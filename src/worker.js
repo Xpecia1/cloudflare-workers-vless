@@ -604,7 +604,7 @@ function getVLESSConfig(userID, hostName) {
 	const vlessMain = 
 	`${protocol}` + 
 	`://${userID}@${hostName}:443`+
-	`?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2048#${hostName}`;
+	`?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#${hostName}`;
 	
 	return `
 ################################################################
@@ -626,7 +626,7 @@ clash-meta
   sni: ${hostName}
   client-fingerprint: chrome
   ws-opts:
-    path: "/?ed=2048"
+    path: "/?ed=2560"
     headers:
       host: ${hostName}
 ---------------------------------------------------------------
